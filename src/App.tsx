@@ -99,31 +99,33 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-slate-100/50 -z-10" />
           <div className="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <FadeIn>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-[#FF6A00] text-xs md:text-sm font-semibold mb-6">
-                <Zap className="w-3 h-3 md:w-4 md:h-4" />
-                Shopee Growth Partnership Program
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0B3C5D] leading-[1.15] md:leading-[1.1] mb-6 tracking-tight">
-                Shopee kamu sudah jalan, tapi growth-nya masih stagnan?
-              </h1>
-              <p className="text-base md:text-lg text-slate-600 mb-8 md:mb-10 leading-relaxed max-w-xl">
-                Banyak brand sudah memiliki produk bagus, menjalankan Shopee Ads, dan punya traffic. 
-                Tetapi penjualan tetap stuck karena struktur growth marketplace belum optimal.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-                <button 
-                  onClick={scrollToForm}
-                  className="flex items-center justify-center gap-2 bg-[#FF6A00] hover:bg-[#e65f00] text-white px-6 py-3.5 md:px-8 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all shadow-lg shadow-orange-500/30 hover:shadow-orange-500/40"
-                >
-                  Diskusikan Toko Saya
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-                <button 
-                  onClick={() => document.getElementById('framework')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="flex items-center justify-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-300 text-slate-700 px-6 py-3.5 md:px-8 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all"
-                >
-                  Lihat Cara Kami Membantu
-                </button>
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-[#FF6A00] text-xs md:text-sm font-semibold mb-6">
+                  <Zap className="w-3 h-3 md:w-4 md:h-4" />
+                  Shopee Growth Partnership Program
+                </div>
+                <h1 className="text-[40px] md:text-5xl lg:text-6xl font-bold text-[#0B3C5D] leading-[1.15] md:leading-[1.1] mb-6 tracking-tight">
+                  Shopee kamu sudah jalan, tapi growth-nya masih stagnan?
+                </h1>
+                <p className="text-base md:text-lg text-slate-600 mb-8 md:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Banyak brand sudah memiliki produk bagus, menjalankan Shopee Ads, dan punya traffic. 
+                  Tetapi penjualan tetap stuck karena struktur growth marketplace belum optimal.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 md:gap-4">
+                  <button 
+                    onClick={scrollToForm}
+                    className="flex items-center justify-center gap-2 bg-[#FF6A00] hover:bg-[#e65f00] text-white px-6 py-3.5 md:px-8 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all shadow-lg shadow-orange-500/30 hover:shadow-orange-500/40"
+                  >
+                    Diskusikan Toko Saya
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                  <button 
+                    onClick={() => document.getElementById('framework')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="flex items-center justify-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-300 text-slate-700 px-6 py-3.5 md:px-8 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all"
+                  >
+                    Lihat Cara Kami Membantu
+                  </button>
+                </div>
               </div>
             </FadeIn>
             
@@ -175,8 +177,8 @@ export default function App() {
                 { icon: Clock, title: "Seller sibuk operasional tapi growth tidak bergerak." }
               ].map((problem, i) => (
                 <FadeIn key={i} delay={i * 0.1}>
-                  <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 h-full">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4 md:mb-6">
+                  <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 h-full flex flex-col items-center text-center">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4 md:mb-6 mx-auto">
                       <problem.icon className="w-5 h-5 md:w-6 md:h-6 text-red-500" />
                     </div>
                     <p className="font-semibold text-slate-800 text-base md:text-lg leading-snug">{problem.title}</p>
@@ -353,8 +355,8 @@ export default function App() {
                 { icon: Target, title: "Quarterly Growth Strategy Review", desc: "Evaluasi strategi growth jangka panjang." }
               ].map((feature, i) => (
                 <FadeIn key={i} delay={i * 0.1}>
-                  <div className="flex flex-col sm:flex-row gap-4 md:gap-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm">
-                    <div className="w-12 h-12 md:w-14 md:h-14 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
+                  <div className="flex flex-col items-center text-center gap-4 md:gap-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-blue-50 rounded-xl flex items-center justify-center shrink-0 mx-auto">
                       <feature.icon className="w-6 h-6 md:w-7 md:h-7 text-[#0B3C5D]" />
                     </div>
                     <div>
@@ -450,7 +452,7 @@ export default function App() {
             <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
               {/* Starter */}
               <FadeIn delay={0.1}>
-                <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-sm h-full flex flex-col">
+                <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-sm h-full flex flex-col text-center">
                   <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-2">Growth Starter</h3>
                   <div className="my-4 md:my-6">
                     <span className="text-3xl md:text-4xl font-extrabold text-[#0B3C5D]">3%</span>
@@ -467,7 +469,7 @@ export default function App() {
 
               {/* Partner (Highlighted) */}
               <FadeIn delay={0.2}>
-                <div className="bg-[#0B3C5D] rounded-3xl p-6 md:p-8 border border-[#0B3C5D] shadow-xl relative h-full flex flex-col transform md:-translate-y-4 mt-4 md:mt-0">
+                <div className="bg-[#0B3C5D] rounded-3xl p-6 md:p-8 border border-[#0B3C5D] shadow-xl relative h-full flex flex-col text-center transform md:-translate-y-4 mt-4 md:mt-0">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#FF6A00] text-white px-3 py-1 md:px-4 md:py-1 rounded-full text-xs md:text-sm font-bold tracking-wide uppercase whitespace-nowrap">
                     Most Popular
                   </div>
@@ -487,7 +489,7 @@ export default function App() {
 
               {/* Scale */}
               <FadeIn delay={0.3}>
-                <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-sm h-full flex flex-col mt-4 md:mt-0">
+                <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-sm h-full flex flex-col text-center mt-4 md:mt-0">
                   <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-2">Scale Partnership</h3>
                   <div className="my-4 md:my-6">
                     <span className="text-3xl md:text-4xl font-extrabold text-[#0B3C5D]">2%</span>
