@@ -25,9 +25,9 @@ export default function App() {
     e.preventDefault();
     setFormStatus('submitting');
 
-    // Trigger Meta Pixel Purchase Event
+    // Trigger Meta Pixel Lead Event
     if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Purchase', { currency: 'IDR', value: 1 });
+      (window as any).fbq('track', 'Lead');
     }
 
     const form = e.currentTarget;
@@ -66,10 +66,6 @@ export default function App() {
   };
 
   const scrollToForm = () => {
-    // Trigger Meta Pixel InitiateCheckout Event
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'InitiateCheckout');
-    }
     document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 
